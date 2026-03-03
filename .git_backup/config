@@ -1,0 +1,15 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[branch "main"]
+	gk-last-accessed = 2026-01-23T13:55:56.394Z
+	gk-last-modified = 2026-01-23T13:55:56.394Z
+	remote = origin
+	merge = refs/heads/main
+[remote "origin"]
+	url = https://github.com/zhaotianlong/loss-weight-nextjs.git
+	fetch = +refs/heads/*:refs/remotes/origin/*

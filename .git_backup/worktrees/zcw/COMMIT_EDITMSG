@@ -1,0 +1,6 @@
+feat: 为mock数据添加createTime和updateTime字段，并实现按updateTime降序排序
+
+- 在student.ts原始数据中自动生成createTime和updateTime字段
+- 在mockData.ts中统一为所有数据补充时间字段
+- 所有列表查询结果按updateTime降序排列，最新数据在前
+- 新增和更新数据时自动维护时间字段

@@ -1,0 +1,193 @@
+# 减肥训练营管理系统 - Cursor AI 上下文规则
+
+## 项目概述
+这是一个企业级减肥训练营管理后台系统，支持多营地、多角色管理。使用 Next.js 16 App Router + React 19 + TypeScript + Ant Design Pro Components + MSW (Mock Service Worker)。
+
+## 技术栈
+- **框架**: Next.js 16.1.1 (App Router)
+- **UI库**: React 19.2.3 + Ant Design 6.1.3 + @ant-design/pro-components 2.8.10
+- **样式**: Tailwind CSS v4
+- **类型**: TypeScript 5
+- **HTTP客户端**: Axios 1.13.2
+- **Mock**: MSW 1.3.5 (用于开发环境API模拟)
+- **图表**: Recharts 3.6.0
+
+## 项目架构原则
+
+### 1. 数据架构
+- **mockData.ts** (`src/mock/mockData.ts`) = 数据库：所有静态和初始数据都存储在这里
+- **MSW Handlers** (`src/mocks/handlers/`) = 服务端接口：所有数据操作（增删改查）都通过 MSW 接口模拟
+- **Service层** (`src/service/`) = API调用层：封装所有HTTP请求，使用Axios
+- **不允许**在组件中直接操作 mockData，必须通过 Service -> MSW Handler -> mockData 的流程
+
+### 2. 文件结构
+```
+app/                          # Next.js App Router 页面和布局
+├── (pages)/                 # 页面路由
+│   ├── dashboard/          # 仪表板模块
+│   ├── camp-manage/        # 营地管理
+│   ├── login/              # 登录页面（独立布局）
+│   ├── profile/            # 个人中心
+│   └── ...
+├── layout.tsx              # 根布局
+└── globals.css             # 全局样式
+
+src/
+├── components/             # React 组件
+│   ├── MainLayout.tsx     # 主布局组件（使用ProLayout）
+│   ├── AuthGuard.tsx      # 路由守卫（认证检查）
+│   ├── PermissionGuard.tsx # 权限守卫（权限检查）
+│   └── common/            # 公共组件（StatusTag等）
+├── contexts/              # React Context
+│   └── UserContext.tsx    # 用户状态管理（用户信息、权限）
+├── hooks/                 # 自定义 Hooks
+│   └── usePermission.ts   # 权限检查 Hook
+├── service/               # API 服务层（所有HTTP请求）
+├── mocks/                 # MSW 模拟服务
+│   ├── handlers/          # API handlers
+│   ├── MSWContext.tsx     # MSW 上下文
+│   └── InitMock.tsx       # MSW 初始化
+├── mock/                  # Mock 数据
+│   └── mockData.ts        # 所有静态数据（相当于数据库）
+├── lib/                   # 工具库
+│   ├── request.ts         # Axios 实例和拦截器
+│   └── mswReady.ts        # MSW 就绪检查
+├── utils/                 # 工具函数
+│   ├── auth.ts            # 认证工具（token管理）
+│   └── index.ts           # 其他工具函数
+├── constants/             # 常量定义
+│   └── permissions.ts     # 权限常量
+└── types/                 # TypeScript 类型定义
+    └── models.ts          # 数据模型类型
+```
+
+### 3. 认证和权限系统
+- **认证**: Token 存储在 localStorage，通过 `src/utils/auth.ts` 管理
+- **用户状态**: 通过 `UserContext` 全局管理，包含用户信息和权限
+- **路由守卫**: `AuthGuard` 检查认证状态，`PermissionGuard` 检查权限
+- **权限检查**: 使用 `usePermission` Hook 或 `PermissionGuard` 组件
+- **登录页**: `/app/login/page.tsx` 是独立页面，不包含主布局
+
+### 4. 代码规范
+
+#### React 组件
+- 使用函数式组件 + Hooks
+- 客户端组件必须使用 `'use client'` 指令
+- 优先使用 TypeScript 类型推断，避免使用 `any`
+- 组件命名使用 PascalCase
+- 文件命名使用 kebab-case 或与组件名一致
+
+#### API 调用
+- 所有 API 调用通过 `src/service/` 目录下的服务函数
+- 服务函数使用 Axios 实例（`src/lib/request.ts`）
+- 统一使用 `ApiResponse<T>` 类型作为返回类型
+- 错误处理在 Axios 拦截器中统一处理
+
+#### MSW Handlers
+- Handler 文件放在 `src/mocks/handlers/`
+- 使用 `getCollection`, `addItem`, `updateItem`, `deleteItem` 操作 mockData
+- 统一响应格式：`{ success: boolean, data?: T, meta?: PaginationMeta, message?: string }`
+- ID 生成：字符串类型使用 `prefix_${Date.now()}`，数字类型使用 `Date.now()`
+
+#### 样式
+- 优先使用 Ant Design 组件样式
+- 自定义样式使用 Tailwind CSS
+- 全局样式在 `app/globals.css` 中定义
+- 布局使用 Ant Design Pro 的 ProLayout、ProTable 等组件
+
+#### TypeScript
+- 严格类型检查，避免使用 `any`
+- 类型定义放在 `src/types/` 目录
+- 使用 `CollectionItem<K>` 和 `CollectionName` 类型操作 mockData
+- 接口命名使用 PascalCase
+
+### 5. 关键约定
+
+#### 数据操作流程
+1. **前端组件** → 调用 `src/service/` 中的服务函数
+2. **服务函数** → 使用 Axios 发送 HTTP 请求
+3. **MSW Handler** → 拦截请求，操作 `src/mock/mockData.ts`
+4. **返回数据** → 通过 Service 返回给组件
+
+#### MockData 操作规则
+- ✅ 通过 `getCollection`, `addItem`, `updateItem`, `deleteItem` 函数操作
+- ✅ 在 MSW handlers 中修改数据
+- ❌ 不要在组件中直接导入和修改 mockData
+- ❌ 不要创建 memoryStore 或其他独立的数据存储
+
+#### 页面布局
+- 登录页 (`/login`) 使用独立布局，不包含 MainLayout
+- 其他页面通过 `MainLayout` 包裹，使用 ProLayout
+- 内容区域使用 ProTable、ProCard 等 Pro 组件
+
+#### 权限控制
+- 路由级别：使用 `PermissionGuard` 包裹需要权限的页面
+- 组件级别：使用 `usePermission` Hook 检查权限
+- 按钮级别：根据权限动态显示/隐藏操作按钮
+
+### 6. 开发建议
+
+#### 添加新功能
+1. 在 `mockData.ts` 中添加数据结构
+2. 在 `src/types/models.ts` 中添加 TypeScript 类型
+3. 在 `src/mocks/handlers/` 中创建或更新 handler
+4. 在 `src/service/` 中创建服务函数
+5. 在 `app/` 中创建页面组件
+6. 使用 ProTable、ProCard 等组件构建 UI
+
+#### 状态管理
+- 全局状态使用 React Context（如 UserContext）
+- 局部状态使用 useState/useReducer
+- 服务端状态可以考虑使用 React Query（如果添加）
+
+#### 错误处理
+- API 错误在 Axios 拦截器中统一处理
+- 组件中使用 try-catch 处理业务逻辑错误
+- 使用 Ant Design 的 message 组件显示错误提示
+
+#### 性能优化
+- 使用 Next.js 的 Server Components（如果适用）
+- 客户端组件使用 React.memo 优化重渲染
+- 大列表使用虚拟滚动或分页
+- 图片使用 Next.js Image 组件优化
+
+### 7. 常见模式
+
+#### ProTable 使用
+```typescript
+const columns: ProColumns<DataType>[] = [...];
+<ProTable
+  actionRef={actionRef}
+  columns={columns}
+  request={async (params) => {
+    const response = await getDataList(params);
+    return {
+      data: response.data,
+      success: response.success,
+      total: response.meta?.total || 0,
+    };
+  }}
+/>
+```
+
+#### 模态框表单
+```typescript
+const [visible, setVisible] = useState(false);
+<Modal visible={visible} onCancel={() => setVisible(false)}>
+  <Form onFinish={handleSubmit}>...</Form>
+</Modal>
+```
+
+#### 权限检查
+```typescript
+const { hasPermission } = usePermission();
+{hasPermission('camp:create') && <Button>新增</Button>}
+```
+
+### 8. 注意事项
+- 所有数据操作必须通过 MSW handlers，不要直接操作 mockData
+- 登录成功后使用 `window.location.href` 强制刷新页面，确保 UserContext 重新初始化
+- MSW 初始化需要时间，使用 MSWContext 等待就绪后再进行数据请求
+- 组件中需要等待 MSW 就绪时，使用 `waitForMSW` 函数
+- 使用中文简体作为界面语言和注释语言
+

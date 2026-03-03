@@ -1,0 +1,16 @@
+feat: 添加统一日志系统并优化错误处理
+
+- 新增 src/utils/logger.ts 统一日志工具
+  - 支持 debug/info/warn/error 四个级别
+  - 开发/生产环境自动区分
+  - 结构化日志格式（时间戳、级别、上下文）
+  - 预留错误追踪服务集成接口
+
+- 优化错误日志记录
+  - UserContext: 使用 logger 替代 console.error，添加上下文信息
+  - MSWContext: 使用 logger 替代 console.info/error
+  - password.ts: 使用 logger 替代 console.error
+
+- 改进错误处理
+  - 添加更详细的错误上下文（路径、状态码等）
+  - 为生产环境错误追踪预留接口

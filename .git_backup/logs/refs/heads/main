@@ -1,0 +1,78 @@
+0000000000000000000000000000000000000000 0fecf601f058ffd831d6a05500e6d5182f38066b along <along@alongdeMacBook-Pro.local> 1767158780 +0800	commit (initial): Initial commit from Create Next App
+0fecf601f058ffd831d6a05500e6d5182f38066b 8581ac2c8670e110d2348ee9acf1f543f755d044 along <along@alongdeMacBook-Pro.local> 1767162837 +0800	commit: feat: 减肥训练营管理系统完整框架
+8581ac2c8670e110d2348ee9acf1f543f755d044 fde271d6f4450c076cf29a6b5aa4892b4d1d3642 along <along@alongdeMacBook-Pro.local> 1767163492 +0800	commit: feat: 集成Ant Design UI框架
+fde271d6f4450c076cf29a6b5aa4892b4d1d3642 fd58b8b2a322dd66edb2ba64f652f54e42bc2bae along <along@alongdeMacBook-Pro.local> 1767333257 +0800	commit: feat(dashboard): add Pro-like layout, dashboard cards; refine mockData types and handlers; update tsconfig
+fd58b8b2a322dd66edb2ba64f652f54e42bc2bae 7bb6297d53795f63619023c3f51c694e83ccc6a0 along <along@alongdeMacBook-Pro.local> 1767333811 +0800	commit: chore(cleanup): remove page_old backup files
+7bb6297d53795f63619023c3f51c694e83ccc6a0 70cc8407c54a9c734cabc7f11ec0cd8df4ad2094 along <along@alongdeMacBook-Pro.local> 1767334689 +0800	commit: feat(api): replace static page arrays with API-driven data for students, courses, dashboard checkins
+70cc8407c54a9c734cabc7f11ec0cd8df4ad2094 62098b024c96f4a6923afa35997b668278eaa826 along <along@alongdeMacBook-Pro.local> 1767353825 +0800	commit: chore(routing): make root path redirect to /dashboard (use next/navigation redirect)
+62098b024c96f4a6923afa35997b668278eaa826 7d488b3a42b0842cfc5fcc16371ea3757bed44c9 along <along@alongdeMacBook-Pro.local> 1767360426 +0800	commit: feat: 调整路由结构并使用 ProComponents 重构页面
+7d488b3a42b0842cfc5fcc16371ea3757bed44c9 ac5cf8b6191c4d91fcb8a2e899296be4111d418b along <along@alongdeMacBook-Pro.local> 1767374769 +0800	commit: feat: 完善减肥训练营管理后台应用
+ac5cf8b6191c4d91fcb8a2e899296be4111d418b 3ef471d16eda5b1e356201eb927649693da2b760 along <along@alongdeMacBook-Pro.local> 1767585421 +0800	commit: fix: 修复页面刷新后数据无法显示的问题
+3ef471d16eda5b1e356201eb927649693da2b760 61c45902935ea035316c7c2caa40a449f9b85acf along <along@alongdeMacBook-Pro.local> 1767591137 +0800	commit: feat: 添加个人中心页面及相关功能
+61c45902935ea035316c7c2caa40a449f9b85acf 00dda9aafa79872f992614e18fc932e442dea873 along <along@alongdeMacBook-Pro.local> 1767591516 +0800	commit: fix: 修复刷新页面时数据获取失败的问题
+00dda9aafa79872f992614e18fc932e442dea873 a51441f40d354ea9c8f9f1e5bab10c7e97713b75 along <along@alongdeMacBook-Pro.local> 1767594764 +0800	commit: 完善登录态处理：添加权限体系、路径保存恢复、token过期处理
+a51441f40d354ea9c8f9f1e5bab10c7e97713b75 e477e250615d9b75a596bd0e5f9719d73703a4c7 along <along@alongdeMacBook-Pro.local> 1767596875 +0800	commit: refactor: 取消memoryStore文件，将所有数据统一汇总到mockData中
+e477e250615d9b75a596bd0e5f9719d73703a4c7 86e5ab4e193875023ad776df6f8259eb74486fdc along <along@alongdeMacBook-Pro.local> 1767596999 +0800	commit: docs: 添加.cursorrules文件优化Cursor AI上下文理解
+86e5ab4e193875023ad776df6f8259eb74486fdc cd51db25cee26e03b3d42bacb73bbd0d80ad981e along <along@alongdeMacBook-Pro.local> 1767677548 +0800	commit: feat: 营地管理增加创建日期、开业日期、关店日期、备注字段
+cd51db25cee26e03b3d42bacb73bbd0d80ad981e ca129131aaf317ca74e98f0dc3224a124944a652 along <along@alongdeMacBook-Pro.local> 1767680840 +0800	commit: feat: 房源管理页面改为嵌套表格，使用聚合接口，支持分页和筛选
+ca129131aaf317ca74e98f0dc3224a124944a652 29c20078ad170ebce340e9b81238977dab143945 along <along@alongdeMacBook-Pro.local> 1767682396 +0800	commit: feat: 调整房间类型数据结构，补充完整的房间类型数据
+29c20078ad170ebce340e9b81238977dab143945 a25815ff9e9ecf7ea97f0eae7bd80a7f0482bcdf along <along@alongdeMacBook-Pro.local> 1767683161 +0800	commit: feat: 登录时查询并存储用户所属营地信息，个人中心显示
+a25815ff9e9ecf7ea97f0eae7bd80a7f0482bcdf db98e5e7d601653137b3978b3b275d1efcaf3d83 along <along@alongdeMacBook-Pro.local> 1767684877 +0800	commit: feat: 删除旧角色并优化权限系统，实现从context获取campId
+db98e5e7d601653137b3978b3b275d1efcaf3d83 f926c1f28fc52d7705d1a8ade31cebbc7e23e18d along <along@alongdeMacBook-Pro.local> 1767685714 +0800	commit: feat: 房间类型列表页添加所属营地筛选和显示
+f926c1f28fc52d7705d1a8ade31cebbc7e23e18d 8ef3fdb0ee05b36d35eb0c237130ea1e0c208737 along <along@alongdeMacBook-Pro.local> 1767687199 +0800	commit: 优化房间管理和房间类型页面的筛选功能
+8ef3fdb0ee05b36d35eb0c237130ea1e0c208737 a5d6e6a5e70b6082256aac013a8eb77f022071a9 along <along@alongdeMacBook-Pro.local> 1767778705 +0800	commit: 优化房间类型筛选功能
+a5d6e6a5e70b6082256aac013a8eb77f022071a9 bf8c229d39dd41081b82e48e697809dddaa7fea5 along <along@alongdeMacBook-Pro.local> 1767779449 +0800	commit: 实现房源管理页面增删改功能并优化营地默认选择
+bf8c229d39dd41081b82e48e697809dddaa7fea5 7749a5bbddf8956f37ba1fcf3764b10464847adc along <along@alongdeMacBook-Pro.local> 1767780824 +0800	commit: 修复多个页面 JSX 语法错误：使用 Fragment 包裹 ProTable 和 Modal 组件
+7749a5bbddf8956f37ba1fcf3764b10464847adc c80e18265077396c882f9d13495c8787a0c5d74e along <along@alongdeMacBook-Pro.local> 1767783549 +0800	commit: 优化营地显示和筛选功能
+c80e18265077396c882f9d13495c8787a0c5d74e ed4670e98e07a245900787252585a92cfe8279bc along <along@alongdeMacBook-Pro.local> 1767785590 +0800	commit: 优化房源管理页面：修复房间类型筛选逻辑，支持包含检索和级联联动
+ed4670e98e07a245900787252585a92cfe8279bc 4f90cc6c06385944be590326aa9233f92cde9184 along <along@alongdeMacBook-Pro.local> 1767791712 +0800	commit: 优化房源管理功能：房间类型去重、床位类型字段、删除校验和错误处理
+4f90cc6c06385944be590326aa9233f92cde9184 fef06644f2d18bf25163bc440c7d3ad3307c3adb along <along@alongdeMacBook-Pro.local> 1767794053 +0800	commit: 优化错误码逻辑和房间管理功能
+fef06644f2d18bf25163bc440c7d3ad3307c3adb fe04487209341021845d0e151dd195febf97ee68 along <along@alongdeMacBook-Pro.local> 1767795090 +0800	commit: 修复表单数据保留和编译错误
+fe04487209341021845d0e151dd195febf97ee68 5ee6abb988442a007cbb8f8cc2557b985eab6c03 along <along@192.168.1.244> 1767799136 +0800	commit: feat: 添加学员续租功能并调整床位到期逻辑
+5ee6abb988442a007cbb8f8cc2557b985eab6c03 be3f77f7a05ff1344b5b68efeb9ab6293522f9ce along <along@192.168.1.244> 1767801341 +0800	commit: feat: 房源管理页面增强功能和床位类型验证
+be3f77f7a05ff1344b5b68efeb9ab6293522f9ce ed27e5b0c76b956644f2cf80a7b6f01e623c9cc1 along <along@192.168.1.244> 1767802287 +0800	commit: feat: 添加学员离营功能并优化床位列表显示
+ed27e5b0c76b956644f2cf80a7b6f01e623c9cc1 e434ff297146862e0494851f1ab88e1f2835e598 along <along@alongdeMacBook-Pro.local> 1767847182 +0800	commit: style: 调整CheckoutStudentModal组件格式
+e434ff297146862e0494851f1ab88e1f2835e598 b0b8473fc4485eb5312c2bb505183922191e6460 along <along@alongdeMacBook-Pro.local> 1767852562 +0800	commit: feat: 实现密码加密传输和存储功能
+b0b8473fc4485eb5312c2bb505183922191e6460 744946ee9cb6116e013817a0053971e5c4bf7152 along <along@192.168.1.244> 1767881670 +0800	commit: feat: 实现密码修改后重新登录功能，调整密码加密规则
+744946ee9cb6116e013817a0053971e5c4bf7152 ac3513587eef5cd10b93b05c5e3bd0350becb789 along <along@192.168.1.244> 1767885561 +0800	commit: feat: 隐藏非超级管理员的营地选择，修复表单验证问题
+ac3513587eef5cd10b93b05c5e3bd0350becb789 a4f77865e834b997ea8abfe9c19cdce95c9f226e along <along@192.168.1.244> 1767888678 +0800	commit: feat: 将员工管理和学员管理合并到人员管理菜单下
+a4f77865e834b997ea8abfe9c19cdce95c9f226e 48591d11c81294c4725aca65a7bacc8b4bc6dc11 along <along@alongdeMacBook-Pro.local> 1767942983 +0800	commit: feat: 添加身体数据围度指标（臀围、胸围、臂围、腿围）
+48591d11c81294c4725aca65a7bacc8b4bc6dc11 9706e5352ea6ed6e6d9fbd4447055b9fee8aec4a along <along@alongdeMacBook-Pro.local> 1767943215 +0800	commit: feat: 添加测试文件和测试配置
+9706e5352ea6ed6e6d9fbd4447055b9fee8aec4a bc546f6ed82f99d43db9f14fe0740db60c15d979 along <along@alongdeMacBook-Pro.local> 1767946660 +0800
+bc546f6ed82f99d43db9f14fe0740db60c15d979 d51b653aa5c14551d2550a11ebfe982bbd93ac48 along <along@alongdeMacBook-Pro.local> 1767951710 +0800	commit: fix(mock): replace dynamic imports with static imports in user handlers to fix employee creation issue
+d51b653aa5c14551d2550a11ebfe982bbd93ac48 33dd717f3f2050afa88d1658df7984d4e080ceda along <along@alongdeMacBook-Pro.local> 1767952454 +0800	commit: feat(mock): add createTime/updateTime to all data and enable default sorting by updateTime
+33dd717f3f2050afa88d1658df7984d4e080ceda 0900cb21e60d091f682e6beeaae4f8d37805811b along <along@alongdeMacBook-Pro.local> 1767953001 +0800	commit: feat(mock&page): 批量生成合理的模拟数据时间，并在列表页展示创建/更新时间
+0900cb21e60d091f682e6beeaae4f8d37805811b eb85d5f0c88326083348d9bb843ebf86723eb268 along <along@alongdeMacBook-Pro.local> 1767953520 +0800	commit: fix(types): 在所有业务实体类型定义中添加 createTime 和 updateTime 字段
+eb85d5f0c88326083348d9bb843ebf86723eb268 9879e89c7af3fe7a7a79cefe52710dcc500edb67 along <along@alongdeMacBook-Pro.local> 1767954706 +0800	commit: fix(mock): 修复用户接口未返回 createTime 和 updateTime 的问题
+9879e89c7af3fe7a7a79cefe52710dcc500edb67 1791b594b20d5c3be1e5b1f025c4dc8156b12c29 along <along@alongdeMacBook-Pro.local> 1767956937 +0800	commit: feat: standardize list page auto-submit and implement menu auto-expansion
+1791b594b20d5c3be1e5b1f025c4dc8156b12c29 3d9ab14a951d9e4831174f96993d1b54da83cfda along <along@alongdeMacBook-Pro.local> 1767959338 +0800	commit: 功能: 实现学员与教练分配管理功能，包含分配记录、历史查询及 Mock 接口
+3d9ab14a951d9e4831174f96993d1b54da83cfda 072cbbb0da538cfa4b8cc0e3ee5fc6e978324a5d along <along@alongdeMacBook-Pro.local> 1767960895 +0800	commit: 功能: 修复教练分配接口路径，实现 MSW 内存数据共享以确保界面同步更新
+072cbbb0da538cfa4b8cc0e3ee5fc6e978324a5d 6766ff35db063b52dd7112b67e5924a3b01435d7 along <along@alongdeMacBook-Pro.local> 1767961172 +0800	commit (amend): feat(coach): 修复教练分配接口路径，实现 MSW 内存数据共享以确保界面同步更新
+6766ff35db063b52dd7112b67e5924a3b01435d7 24103991e67ce280a670b8b03761a74b07990507 along <along@alongdeMacBook-Pro.local> 1767961796 +0800	commit: feat(coach): 实现人员管理下的教练管理模块，支持增删改查及专项教练功能
+24103991e67ce280a670b8b03761a74b07990507 6b402f56f7a54dfe8d2fd4eb9754a8ab12a0e638 along <along@alongdeMacBook-Pro.local> 1767962040 +0800	commit: style(coach): 调整教练管理页面，移除增删改功能及角色列展示
+6b402f56f7a54dfe8d2fd4eb9754a8ab12a0e638 5425714b3a8b75fdf1c0f17782b621d9dce49423 along <along@alongdeMacBook-Pro.local> 1767962128 +0800	commit: chore(coach): 清理教练管理页面中不再使用的 CoachModal 组件
+5425714b3a8b75fdf1c0f17782b621d9dce49423 2fb417bbdaef9b6cbf36d47a2d01d1942903ba9d along <along@alongdeMacBook-Pro.local> 1767962804 +0800	commit: feat(coach): 移除安排查房弹窗中的查房时间字段
+2fb417bbdaef9b6cbf36d47a2d01d1942903ba9d 1c498d1fe9bca8ee0f3c3d01a8fab04f52392599 along <along@alongdeMacBook-Pro.local> 1767963011 +0800	commit: feat(coach): 实现教练管理页面的学员分配弹窗功能
+1c498d1fe9bca8ee0f3c3d01a8fab04f52392599 f784200f3d973d1f248717b436690c283da7d666 along <along@192.168.1.244> 1767975438 +0800	commit: feat: improve coach management with performance stats, course filtering, and menu fixes
+f784200f3d973d1f248717b436690c283da7d666 2d54afdc67d5659b81c518d00926d725220a34e0 along <along@192.168.1.244> 1767978086 +0800	commit: refactor: private course page to nested list, support multiple payment types and coach management
+2d54afdc67d5659b81c518d00926d725220a34e0 6c97fa525430eb0532c8b0552554c940b948994b along <along@192.168.0.103> 1768363913 +0800	commit: feat: 完善业绩统计字段并重构 MSW 数据管理架构
+6c97fa525430eb0532c8b0552554c940b948994b d2d89d5fcd4a018ec3173a13904687c404b2d429 along <along@192.168.0.103> 1768364286 +0800	commit: feat: 业绩统计弹窗新增进度、开单/关单时间字段并修复教练课程过滤类型问题
+d2d89d5fcd4a018ec3173a13904687c404b2d429 b83a5b01de1a7a4d0b4ec7fbf42ff912b004cc7f along <along@192.168.0.103> 1768449982 +0800	commit: feat: 优化业绩统计、课程安排日历及私教管理功能
+b83a5b01de1a7a4d0b4ec7fbf42ff912b004cc7f 98b171923c46f789d408116f705022f5a0dac997 along <along@192.168.0.103> 1768535429 +0800	commit: feat: 学员管理增加私教记录功能，支持嵌套列表展示及开单/记录ID
+98b171923c46f789d408116f705022f5a0dac997 2845b01ceb4eb9559df29198dd6059590156efd0 along <along@192.168.0.103> 1768540432 +0800	commit: feat: refactor schedule planning page, improve coach performance data consistency, and enhance course tables with coach names
+2845b01ceb4eb9559df29198dd6059590156efd0 5248723022307badf8cbbd9ddc7fc7808a379b21 along <along@192.168.0.103> 1768565246 +0800	commit: feat: 优化私教课与学员管理功能
+5248723022307badf8cbbd9ddc7fc7808a379b21 d9db340377937ce3592c232b6e78e54fe5a9dd39 along <along@192.168.0.103> 1768567381 +0800	commit: feat: 优化日程排班与私教课管理功能
+d9db340377937ce3592c232b6e78e54fe5a9dd39 d18f73d188f70fb3c1ef376760144de265b5d79f along <along@192.168.0.103> 1768569177 +0800	commit: feat: 完善日程排班Mock数据与前端逻辑
+d18f73d188f70fb3c1ef376760144de265b5d79f 91bb8f05e0d1bbf3894356dd020331830a983dfb along <along@192.168.0.103> 1768572482 +0800	commit: feat: 优化排班管理功能与交互
+91bb8f05e0d1bbf3894356dd020331830a983dfb 97a50372b59da32c7a4631aced138b9163aa04ad along <along@192.168.0.104> 1768631791 +0800	commit: feat(营地管理): 添加营地日程设置页面和权限
+97a50372b59da32c7a4631aced138b9163aa04ad 4fb7d04a5a08248860aadbda2860445c926927c3 along <along@192.168.0.104> 1768639546 +0800	commit: feat(排班管理): 重构排班功能并添加编辑功能
+4fb7d04a5a08248860aadbda2860445c926927c3 e03b9f40f179547736301a8259846fdcad1ec0aa along <along@192.168.0.104> 1768652480 +0800	commit: feat(营地设施): 新增营地设施管理功能
+e03b9f40f179547736301a8259846fdcad1ec0aa e299f814db6c5f25374219db6ef15a63edd2f979 along <along@192.168.0.104> 1768659340 +0800	commit: feat(排班): 新增批量排班功能并优化排班管理界面
+e299f814db6c5f25374219db6ef15a63edd2f979 dba2077fbba7588e9ed12ea033b59d0d7a0f49db along <along@192.168.0.103> 1768804512 +0800	commit: feat(财务审核): 实现财务审核流程及相关功能
+dba2077fbba7588e9ed12ea033b59d0d7a0f49db 7c70be8af2944a813625aca5568a0b24c37bd8b3 along <along@192.168.0.103> 1768806078 +0800	commit: feat(床位管理): 实现换房申请及财务审核流程
+7c70be8af2944a813625aca5568a0b24c37bd8b3 40d5f4a796a9a3f1f509e93d7e747610249f73b2 along <along@192.168.0.103> 1768818955 +0800	commit: feat(performance): 新增教练业绩管理功能模块
+40d5f4a796a9a3f1f509e93d7e747610249f73b2 d0c79bff01b18e3ed358c9c2b25c3b070120915e along <along@192.168.0.103> 1768819553 +0800	commit: feat(performance): 添加营地过滤条件到绩效计算逻辑
+d0c79bff01b18e3ed358c9c2b25c3b070120915e 1a4657d937a9356ffea2f6c2aa5e574dc96bbced along <along@192.168.0.103> 1768820243 +0800	commit: docs: 重构项目文档结构并更新内容
+1a4657d937a9356ffea2f6c2aa5e574dc96bbced 651a0f7aabca65e18385258e99a4e270db332b0a along <along@alongdeMacBook-Pro.local> 1769141018 +0800	commit: feat: refactor and implement coach, user and room management modules
+651a0f7aabca65e18385258e99a4e270db332b0a 9e986acab4c80d2177b7fe1ada52f8c8b25d528c along <along@alongdeMacBook-Pro.local> 1769176132 +0800	commit: feat: sync changes and add supabase integration
+9e986acab4c80d2177b7fe1ada52f8c8b25d528c 9129183a96e6662eefea3913f5c23fbb4dafc7ca along <along@alongdeMacBook-Pro.local> 1770955584 +0800	commit: feat: install agent skills, fix room manage 404 routes and resolve typescript build errors
